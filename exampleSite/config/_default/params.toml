@@ -1,0 +1,5 @@
+[avatar]
+  isRemote = false
+  url = '/img/avatar.png'
+  height = 120
+  width = 120
