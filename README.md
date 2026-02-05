@@ -1,8 +1,3 @@
-# Hugo theme Mage
+# Example site
 
-A Hugo theme featuring soft, muted colors and a low-key aesthetic.
-
-Includes light and dark themes, card-style layouts, and more.
-
-
-Work in progress.
+This is a example site to showcase the Hugo theme Mage.

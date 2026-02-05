@@ -1,0 +1,11 @@
+baseURL = '/'
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = true
+disableDefaultLanguageRedirect = false
+disableLanguages = []
+title = 'Hugo Theme Mage'
+
+theme = 'hugo-theme-mage'
+
+[markup]
+  _merge = 'deep'

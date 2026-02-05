@@ -1,9 +1,0 @@
-{{ define "content" }}
-<div class="taxonomy-list-wrapper">
-  <h2>{{ .Title }}</h2>
-  <hr>
-  {{ range .Pages }}
-    <a href="{{ .RelPermalink }}" class="taxonomy">{{ .LinkTitle }} ({{ len .Pages }})</a>
-  {{ end }}
-</div>
-{{ end }}

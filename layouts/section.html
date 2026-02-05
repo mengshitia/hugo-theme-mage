@@ -1,7 +1,0 @@
-{{ define "content" }}
-  <h2>{{ .Title }}</h2>
-  {{ $pages := .Pages }}
-  {{ $paginated := (.Paginate $pages).Pages }}
-  {{ partial "articles/articleEntriesList.html" (dict "articles" $paginated "page" .) }}
-  {{ partial "pagination.html" . }}
-{{ end }}
