@@ -1,0 +1,18 @@
+{{/*
+Display a list of entries of some given articles.
+
+@context {page} articles The given articles.
+@context {page} page The current page.
+
+@example:
+{{ $articles := .Site.RegularPages }}
+{{ partial "articles/articleEntriesList.html" (dict "articles" $articles "page" .) }}
+*/}}
+
+{{ $articles := .articles }}
+{{ $page := page }}
+<div class="article-entries">
+  {{ range $articles }}
+    {{ partial "articles/articleEntry.html" . }}
+  {{ end }}
+</div>

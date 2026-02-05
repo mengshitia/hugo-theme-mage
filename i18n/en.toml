@@ -1,0 +1,18 @@
+[archive]
+  title = 'Archives'
+
+[article]
+  noDescription = 'No description.'
+
+[builtWith]
+  title = 'Built with {{ .hugo }} and {{ .theme }}'
+
+[cc]
+  link = 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en'
+  title = 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International'
+
+[themeControl]
+  title = 'Click to change theme'
+
+[toc]
+  title = 'Table of Contents'

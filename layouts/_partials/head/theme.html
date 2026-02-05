@@ -1,0 +1,16 @@
+{{/* head/theme.html */}}
+
+{{/* Init light/dark theme. */}}
+<script>
+  (() => {
+    const savedThemeKey = 'savedTheme';
+    const savedTheme = localStorage.getItem(savedThemeKey);
+    if (savedTheme && savedTheme !== 'auto') {
+      document.documentElement.dataset.theme = savedTheme;
+    } else {
+      /* If no theme is chosed or 'auto' is chosed, follow the user's preference. */
+      const preferDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+      document.documentElement.dataset.theme = preferDarkMode ? 'dark' : 'light';
+    }
+  })()
+</script>

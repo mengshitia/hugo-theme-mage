@@ -1,0 +1,16 @@
+{{/*
+Render the table of contents,
+Only when the current page is a page,
+not other page kinds.
+
+@context (page) . The current page.
+
+@example: {{ partial "components/toc.html" . }}
+*/}}
+
+{{ if .IsPage }}
+  <div class="toc-wrapper">
+    <h3 class="title">{{ T "toc.title" }}</h3>
+    {{ .TableOfContents }}
+  </div>
+{{ end }}

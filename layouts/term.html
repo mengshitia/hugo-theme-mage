@@ -1,0 +1,7 @@
+{{ define "content" }}
+  <h2><a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a> &gt; {{ .Title }} ({{ len .Pages }})</h2>
+  <hr>
+  {{ $paginated := (.Paginate .Pages).Pages }}
+  {{ partial "articles/articleEntriesList.html" (dict "articles" $paginated "page" .) }}
+  {{ partial "pagination.html" . }}
+{{ end }}

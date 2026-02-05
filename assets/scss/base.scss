@@ -1,0 +1,13 @@
+/* base.scss */
+@use "mixins.scss";
+
+.content-wrapper {
+  @include mixins.flex-horizontal;
+  @include mixins.wrapper-main;
+  justify-content: space-between;
+  gap: 1rem;
+
+  &>.content {
+    width: 80%;
+  }
+}

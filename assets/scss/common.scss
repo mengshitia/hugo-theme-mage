@@ -1,0 +1,43 @@
+/* common.scss */
+:root {
+  --padding-article: 2rem;
+  --shadow-article: 0 0 3px 0 var(--color-shadow-article);
+  --width-main: 1200px;
+}
+
+body {
+  background-color: var(--color-background-body);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  transition: background ease 400ms;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text-title);
+}
+
+p {
+  color: var(--color-text-pharagraph);
+}
+
+a {
+  color: var(--color-text-link);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+code {
+  font-size: 1rem;
+}
+
+hr {
+  color: var(--color-separator);
+}

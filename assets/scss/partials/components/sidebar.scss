@@ -1,0 +1,14 @@
+/* partials/components/sidebar.scss */
+@use "../../mixins.scss";
+
+.sidebar {
+  @include mixins.flex-vertical;
+  justify-content: start;
+  gap: 1rem;
+  width: 20%;
+
+  .nav-wrapper {
+    @include mixins.card;
+    padding: 1rem;
+  }
+}

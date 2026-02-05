@@ -1,0 +1,18 @@
+[archive]
+  title = '归档'
+
+[article]
+  noDescription = '没有文章描述。'
+
+[builtWith]
+  title = '使用 {{ .hugo }} 与 {{ .theme }} 搭建'
+
+[cc]
+  link = 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans'
+  title = '知识共享 署名-非商业性使用-相同方式共享 4.0 协议国际版'
+
+[themeControl]
+  title = '点击切换主题'
+
+[toc]
+  title = '本文目录'

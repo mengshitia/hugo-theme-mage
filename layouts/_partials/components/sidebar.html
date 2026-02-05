@@ -1,0 +1,17 @@
+{{/*
+Render a sidebar with some components.
+
+@context (page) . The current page.
+
+@example {{ partial "sidebar.html" . }}
+*/}}
+
+<aside class="sidebar">
+  <div class="nav-wrapper">
+  {{ partialCached "components/avatar.html" . }}
+  {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+  {{ partial "components/themeControl.html" . }}
+  </div>
+  {{ partial "components/taxonomies.html" . }}
+  {{ partial "components/toc.html" . }}
+</aside>

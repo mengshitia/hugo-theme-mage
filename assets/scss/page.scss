@@ -1,0 +1,8 @@
+/* page.scss */
+@use "mixins.scss";
+
+.main-page {
+  .article-wrapper {
+    @include mixins.wrapper-main;
+  }
+}

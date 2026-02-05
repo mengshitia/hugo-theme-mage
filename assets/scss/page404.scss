@@ -1,0 +1,22 @@
+/* page404.scss */
+@use "mixins.scss";
+
+.main-404 {
+  .content-wrapper {
+    @include mixins.flex-vertical;
+    @include mixins.wrapper-main;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+
+    .title,
+    .note {
+      margin: 0;
+    }
+
+    .home {
+      text-decoration: underline;
+    }
+  }
+}

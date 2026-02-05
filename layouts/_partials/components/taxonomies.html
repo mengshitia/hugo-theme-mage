@@ -1,0 +1,31 @@
+{{/*
+Render all taxonomies.
+
+@context (page) . The current page.
+
+@example: {{ partial "components/taxonomies.html" . }}
+*/}}
+
+{{ with site.Taxonomies }}
+  {{ $numberOfTerms := 0}}
+  {{ range $taxonomy, $terms := . }}
+    {{ $numberOfTerms = len . | add $numberOfTerms }}
+  {{ end }}
+
+  {{ if gt $numberOfTerms 0 }}
+    {{ range $taxonomy, $terms := . }}
+      {{ with $terms }}
+      <div class="taxonomies-wrapper">
+        <h3 class="title">
+          <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
+        </h3>
+        <ul class="taxonomies">
+          {{ range $term := . }}
+            <a class="taxonomy" href="{{ .Page.RelPermalink }}">{{ .Page.Title }}&nbsp;({{ len .Pages }})</a>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}

@@ -1,0 +1,35 @@
+/* theme/dark.scss */
+:root {
+  &[data-theme="dark"] {
+    color-scheme: dark;
+    --color-background-article: rgb(40, 40, 40);
+    --color-background-block: rgb(60, 60, 60);
+    --color-background-block-critical: rgb(77, 50, 50);
+    --color-background-block-warning: rgb(72, 71, 58);
+    --color-background-block-sanity: rgb(45, 70, 50);
+    --color-background-body: rgb(30, 30, 30);
+    --color-background-mark: rgb(95, 62, 147);
+    --color-background-page-item: rgb(40, 40, 40);
+    --color-background-page-item-active: rgb(60, 60, 60);
+    --color-background-table-header: rgb(54, 75, 106);
+    --color-background-table-row-differ: rgb(49, 54, 64);
+
+    --color-border-block: rgb(135, 135, 135);
+    --color-border-block-critical: rgb(216, 64, 65);
+    --color-border-block-warning: rgb(245, 204, 88);
+    --color-border-block-sanity: rgb(138, 223, 141);
+    --color-border-table: rgba(110, 110, 110);
+
+    --color-separator: rgb(98, 98, 98);
+
+    --color-shadow-article: rgba(0, 0, 0, 0.2);
+
+    --color-text-code: rgb(190, 172, 236);
+    --color-text-copyright: rgb(204, 204, 204);
+    --color-text-description: rgb(204, 204, 204);
+    --color-text-pharagraph: rgb(220, 220, 220);
+    --color-text-link: rgb(255, 255, 255);
+    --color-text-link-in-article: rgb(255, 159, 195);
+    --color-text-title: rgb(255, 255, 255);
+  }
+}

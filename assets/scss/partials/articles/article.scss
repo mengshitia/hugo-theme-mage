@@ -1,0 +1,93 @@
+/* partials/articles/article.scss */
+@use "../../mixins.scss";
+$blockquote-types: critical, warning, sanity;
+$blockquote-left-border-width: 0.25rem;
+
+.article {
+  @include mixins.flex-vertical;
+  background-color: var(--color-background-article);
+  box-shadow: var(--shadow-article);
+  gap: 1rem;
+
+  .header {
+    @include mixins.flex-vertical;
+    padding: var(--padding-article);
+    padding-bottom: 0;
+
+    .title {
+      margin-top: 0;
+
+      .link {
+        color: var(--color-text-link);
+      }
+    }
+  }
+
+  .content {
+    padding: 0 var(--padding-article);
+
+    a {
+      color: var(--color-text-link-in-article);
+    }
+
+    blockquote {
+      background-color: var(--color-background-block);
+      border-left: $blockquote-left-border-width solid var(--color-border-block);
+      margin: 1rem 0;
+      padding: 0.5rem;
+
+      & p {
+        margin: 0;
+      }
+    }
+
+    @each $type in $blockquote-types {
+      .block-#{$type} {
+        background-color: var(--color-background-block-#{$type});
+        border-left: $blockquote-left-border-width solid var(--color-border-block-#{$type});
+      }
+    }
+
+    /**
+   * Set style for <code> blocks,
+   * except the blocks in the highlight boxes.
+   */
+    code:not(.highlight code) {
+      color: var(--color-text-code);
+    }
+
+    mark {
+      background-color: var(--color-background-mark);
+      color: var(--color-text-pharagraph);
+    }
+
+    th,
+    td {
+      border: 1px solid var(--color-border-table);
+    }
+
+    table {
+      border-collapse: collapse;
+      display: block;
+      overflow: auto;
+    }
+
+    th,
+    td {
+      padding: 0.5rem;
+    }
+
+    thead {
+      background-color: var(--color-background-table-header);
+    }
+
+    tbody>tr:nth-of-type(even) {
+      background-color: var(--color-background-table-row-differ);
+    }
+  }
+
+  .footer {
+    padding: var(--padding-article);
+    padding-top: 0;
+  }
+}

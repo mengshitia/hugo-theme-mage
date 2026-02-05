@@ -1,0 +1,29 @@
+defaultMarkdownHandler = 'goldmark'
+
+[goldmark]
+  [goldmark.extensions]
+    strikethrough = false
+    [goldmark.extensions.extras]
+      [goldmark.extensions.extras.delete]
+        enable = true
+      [goldmark.extensions.extras.insert]
+        enable = true
+      [goldmark.extensions.extras.mark]
+        enable = true
+      [goldmark.extensions.extras.subscript]
+        enable = true
+      [goldmark.extensions.extras.superscript]
+        enable = true
+  [goldmark.parser]
+    [goldmark.parser.attribute]
+      block = true  # Enable markdown attributes for block elements.
+
+[highlight]
+  lineNos = true
+  lineNumbersInTable = false
+  noClasses = false  # Use external CSS file.
+
+[tableOfContents]
+  startLevel = 2
+  endLevel = 4
+  ordered = false

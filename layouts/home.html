@@ -1,0 +1,14 @@
+{{/*
+The home page.
+
+Render a articles list with a default page size of 3.
+Page size can be configured in the site's config file,
+with a section '[pagination]' in custom parameters.
+*/}}
+
+{{ define "content" }}
+  {{ $pageSize := site.Params.pagination.home | default 3 }}
+  {{ $paginated := (.Paginate site.RegularPages $pageSize).Pages }}
+  {{ partial "articles/articlesList.html" (dict "articles" $paginated "page" .) }}
+  {{ partial "pagination.html" . }}
+{{ end }}

@@ -1,0 +1,38 @@
+/* partials/articles/articleEntry.scss */
+@use "../../mixins.scss";
+
+.article-entry {
+  @include mixins.flex-vertical;
+  background-color: var(--color-background-article);
+  box-shadow: var(--shadow-article);
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1rem;
+
+  .header {
+    @include mixins.flex-vertical;
+    gap: 0.25rem;
+
+    .title {
+      margin: 0;
+
+      .link {
+        color: var(--color-text-title);
+      }
+    }
+  }
+
+  .content {
+    .description {
+      color: var(--color-text-description);
+      margin: 0
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: start;
+  }
+}
