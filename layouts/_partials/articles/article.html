@@ -20,6 +20,6 @@ Render the given page as an article.
   <hr>
   </section>
   <footer class="footer">
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    {{ partial "articles/articleTaxonomies.html" . }}
   </footer>
 </article>

@@ -1,0 +1,24 @@
+{{/*
+Render all taxonomies of a given article.
+
+@context (page) . The current page (the given article page).
+
+@example: {{ partial "articles/articleTaxonomies.html" . }}
+*/}}
+
+{{ $page := . }}
+<div class="article-taxonomies-wrapper">
+{{ range $key, $taxonomies := site.Taxonomies }}
+  {{ $termsOfPage := $page.GetTerms $key }}
+  {{ with $termsOfPage }}
+    {{ $taxonomy := (index . 0).Parent }}
+    {{ $i18nTitle := printf "taxonomy.%s" $key | T | default $taxonomy.LinkTitle }}
+    <h4 class="title">
+     <a href="{{ $taxonomy.RelPermalink }}">{{ $i18nTitle }}:</a>
+    </h4>
+    {{ range . }}
+      <a class="term" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+    {{ end }}
+  {{ end }}
+{{ end }}
+</div>

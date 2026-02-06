@@ -11,7 +11,6 @@
 @use "partials/header.scss";
 @use "partials/menu.scss";
 @use "partials/pagination.scss";
-@use "partials/terms.scss";
 @use "taxonomy.scss";
 @use "term.scss";
 
@@ -19,6 +18,7 @@
 @use "partials/articles/articleEntriesList.scss";
 @use "partials/articles/articleEntry.scss";
 @use "partials/articles/articlesList.scss";
+@use "partials/articles/articleTaxonomies.scss";
 
 @use "partials/components/avatar.scss";
 @use "partials/components/copyright.scss";

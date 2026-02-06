@@ -1,5 +1,6 @@
 {{ define "content" }}
-  <h2><a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a> &gt; {{ .Title }} ({{ len .Pages }})</h2>
+  {{ $i18nTitle := printf "taxonomy.%s" .Parent.Section | T | default .Parent.Title }}
+  <h2><a href="{{ .Parent.RelPermalink }}">{{ $i18nTitle }}</a> &gt; {{ .Title }} ({{ len .Pages }})</h2>
   <hr>
   {{ $paginated := (.Paginate .Pages).Pages }}
   {{ partial "articles/articleEntriesList.html" (dict "articles" $paginated "page" .) }}

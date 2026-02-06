@@ -17,7 +17,8 @@ Render all taxonomies.
       {{ with $terms }}
       <div class="taxonomies-wrapper">
         <h3 class="title">
-          <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
+          {{ $i18nTitle := printf "taxonomy.%s" $taxonomy | T | default .Page.LinkTitle }}
+          <a href="{{ .Page.RelPermalink }}">{{ $i18nTitle }}</a>
         </h3>
         <ul class="taxonomies">
           {{ range $term := . }}

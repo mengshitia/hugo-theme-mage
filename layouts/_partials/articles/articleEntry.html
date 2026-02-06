@@ -3,7 +3,7 @@ Render the given page as an article entry.
 
 @context (page) . The given page.
 
-@example: {{ partial "articles/articleEntry" . }}
+@example: {{ partial "articles/articleEntry.html" . }}
 */}}
 
 {{ $date := time.Format "2006-01-02" .Date }}
@@ -19,6 +19,6 @@ Render the given page as an article entry.
     <p class="description">{{ .Description | default $defaultDescription }}</p>
   </section>
   <footer class="footer">
-    {{ partial "terms.html" (dict "taxonomy" "tags" "page" . ) }}
+    {{ partial "articles/articleTaxonomies.html" . }}
   </footer>
 </article>
