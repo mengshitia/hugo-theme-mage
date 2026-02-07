@@ -11,7 +11,7 @@
 
   ul.taxonomies {
     @include mixins.flex-horizontal;
-    align-items: stretch;
+    align-items: baseline;
     flex-wrap: wrap;
     gap: 0.5rem;
     list-style: none;
@@ -20,7 +20,6 @@
     padding: 0;
 
     .taxonomy {
-      align-content: end;
       margin: 0;
     }
   }

@@ -1,6 +1,17 @@
+/* partials/articles/articleTaxonomies.scss */
+@use "../../mixins.scss";
+
 .article-taxonomies-wrapper {
-  .title {
-    display: inline;
-    margin: 0;
+  @include mixins.flex-horizontal;
+  gap: 1.25rem;
+
+  .article-taxonomies {
+    @include mixins.flex-horizontal;
+    align-items: baseline;
+    gap: 0.25rem;
+
+    .title {
+      margin: 0;
+    }
   }
 }

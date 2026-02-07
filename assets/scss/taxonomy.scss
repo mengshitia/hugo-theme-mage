@@ -1,4 +1,14 @@
 /* taxonomy.scss */
-.taxonomy-list-wrapper>.taxonomy {
-  padding: 0.25rem 0.5rem;
+@use "mixins.scss";
+
+.taxonomy-list-wrapper {
+  .taxonomy-list {
+    @include mixins.flex-horizontal;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 }

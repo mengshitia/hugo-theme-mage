@@ -3,8 +3,10 @@
   {{ $i18nTitle := printf "taxonomy.%s" .Section | T | default .Title }}
   <h2>{{ $i18nTitle }}</h2>
   <hr>
-  {{ range .Pages }}
-    <a href="{{ .RelPermalink }}" class="taxonomy">{{ .LinkTitle }} ({{ len .Pages }})</a>
-  {{ end }}
+  <ul class="taxonomy-list">
+    {{ range .Pages }}
+      <a href="{{ .RelPermalink }}" class="taxonomy">{{ .LinkTitle }} ({{ len .Pages }})</a>
+    {{ end }}
+  </ul>
 </div>
 {{ end }}

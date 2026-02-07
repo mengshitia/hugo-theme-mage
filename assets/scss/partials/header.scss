@@ -5,6 +5,7 @@
   .nav {
     @include mixins.flex-horizontal;
     @include mixins.wrapper-main;
+    align-items: baseline;
     justify-content: space-between;
     padding: 1rem;
 
