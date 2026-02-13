@@ -3,5 +3,5 @@
 {{ $ccLink := T "cc.link" | safeHTML }}
 {{ $ccTitle := T "cc.title" | safeHTML }}
 <p class="copyright">
-&copy; {{ now.Year }} <a href="{{ $home }}">{{ $author }}</a> · <a href="{{ $ccLink }}" title="{{ $ccTitle }}">CC BY-NC-SA 4.0</a>
+&copy; {{ now.Year }} <a href="{{ $home }}">{{ $author }}</a> · <a href="{{ $ccLink }}" title="{{ $ccTitle }}" target="_blank">CC BY-NC-SA 4.0</a>
 </p>
