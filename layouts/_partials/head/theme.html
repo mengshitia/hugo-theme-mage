@@ -1,5 +1,3 @@
-{{/* head/theme.html */}}
-
 {{/* Init light/dark theme. */}}
 <script>
   (() => {
@@ -8,7 +6,7 @@
     if (savedTheme && savedTheme !== 'auto') {
       document.documentElement.dataset.theme = savedTheme;
     } else {
-      /* If no theme is chosed or 'auto' is chosed, follow the user's preference. */
+      /* If no theme was chosen or 'auto' was chosen, follow the system's preference. */
       const preferDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
       document.documentElement.dataset.theme = preferDarkMode ? 'dark' : 'light';
     }
