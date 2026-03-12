@@ -9,3 +9,7 @@ theme = 'hugo-theme-mage'
 
 [markup]
   _merge = 'deep'
+
+[services]
+  [services.rss]
+    limit = 10
