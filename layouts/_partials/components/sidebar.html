@@ -10,6 +10,7 @@ Render a sidebar with some components.
   <div class="nav-wrapper">
   {{ partialCached "components/avatar.html" . }}
   {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+  {{ partial "components/rssFeed.html" . }}
   {{ partial "components/themeControl.html" . }}
   </div>
   {{ partial "components/taxonomies.html" . }}
