@@ -1,9 +1,14 @@
 <div class="rss-feed-wrapper">
   <a href="/{{ .Site.Language.Lang }}/index.xml" target="_blank" title="RSS">
-    <svg class="rss-icon" width="24" height="24">
-      <circle cx="6" cy="18" r="1"></circle>
-      <path d="M 4 10 A 10 10 0 0 1 14 20" fill="none"></path>
-      <path d="M 4 4 A 16 16 0 0 1 20 20" fill="none"></path>
+    <svg class="rss-icon" width="24" height="24" viewBox="0 0 24 24">
+      <radialGradient id="rss-gradient" cx="0.2" cy="0.2" r="0.5">
+        <stop offset="0" stop-color="#ffbf00"></stop>
+        <stop offset="1" stop-color="#e27100"></stop>
+      </radialGradient>
+      <rect x="0" y="0" width="24" height="24" fill="url(#rss-gradient)"></rect>
+      <circle cx="6" cy="18" r="2" fill="#fff"></circle>
+      <path d="M 4 10 A 10 10 0 0 1 14 20" fill="none" stroke="#fff" stroke-width="2"></path>
+      <path d="M 4 4 A 16 16 0 0 1 20 20" fill="none" stroke="#fff" stroke-width="2"></path>
     </svg>
   </a>
 </div>
