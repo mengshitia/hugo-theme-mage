@@ -1,6 +1,3 @@
-const UNI_CHAR_CLOCK = '\u{1F557}'
-const UNI_CHAR_MOON = '\u{1F319}'
-const UNI_CHAR_SUN = '\u{1F506}'
 const THEME_AUTO = 'auto'
 const THEME_DARK = 'dark'
 const THEME_LIGHT = 'light'
@@ -10,6 +7,9 @@ window.addEventListener('load', () => {
   const darkThemePreference = window.matchMedia('(prefers-color-scheme: dark)')
   const html = document.querySelector('html')
   const themeControl = document.querySelector('#theme-control')
+  const themeIconClock = document.querySelector('#theme-icon>.clock')
+  const themeIconSun = document.querySelector('#theme-icon>.sun')
+  const themeIconMoon = document.querySelector('#theme-icon>.moon')
 
   /* Utility functions */
   const saveTheme = function(theme) {
@@ -25,8 +25,10 @@ window.addEventListener('load', () => {
     setThemeChangerAuto()
   }
   const setThemeChangerAuto = function() {
-    themeControl.innerText = UNI_CHAR_CLOCK
     themeControl.value = THEME_AUTO
+    themeIconClock.classList.toggle('hide', false)
+    themeIconSun.classList.toggle('hide', true)
+    themeIconMoon.classList.toggle('hide', true)
   }
   const setDarkTheme = function() {
     html.dataset.theme = THEME_DARK
@@ -34,8 +36,10 @@ window.addEventListener('load', () => {
     setThemeChangerDark()
   }
   const setThemeChangerDark = function() {
-    themeControl.innerText = UNI_CHAR_MOON
     themeControl.value = THEME_DARK
+    themeIconClock.classList.toggle('hide', true)
+    themeIconSun.classList.toggle('hide', true)
+    themeIconMoon.classList.toggle('hide', false)
   }
   const setLightTheme = function() {
     html.dataset.theme = THEME_LIGHT
@@ -43,8 +47,10 @@ window.addEventListener('load', () => {
     setThemeChangerLight()
   }
   const setThemeChangerLight = function() {
-    themeControl.innerText = UNI_CHAR_SUN
     themeControl.value = THEME_LIGHT
+    themeIconClock.classList.toggle('hide', true)
+    themeIconSun.classList.toggle('hide', false)
+    themeIconMoon.classList.toggle('hide', true)
   }
   const preferenceChangeHandler = function(ev) {
     if (ev.matches) {
@@ -70,8 +76,8 @@ window.addEventListener('load', () => {
   }
 
   /* Watch theme changer */
-  themeControl.addEventListener('click', (ev) => {
-    const _self = ev.target
+  themeControl.addEventListener('click', () => {
+    const _self = themeControl
     /* Theme order: auto -> light -> dark */
     if (_self.value === THEME_DARK) {
       /* Get system preference then set to auto */
