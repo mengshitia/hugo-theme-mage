@@ -3,6 +3,7 @@
 
 .article-taxonomies-wrapper {
   @include mixins.flex-horizontal;
+  flex-wrap: wrap;
   gap: 1.25rem;
 
   .article-taxonomies {

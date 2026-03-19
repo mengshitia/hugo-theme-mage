@@ -4,5 +4,9 @@
 .avatar-wrapper {
   @include mixins.flex-horizontal;
   justify-content: center;
-  padding: 1rem;
+}
+
+.avatar {
+  height: auto;
+  width: 100%;
 }

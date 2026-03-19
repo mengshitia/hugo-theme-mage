@@ -9,6 +9,8 @@
 
   .nav-wrapper {
     @include mixins.card;
+    @include mixins.flex-vertical;
+    gap: 0.75rem;
     padding: 1rem;
   }
 }
