@@ -9,9 +9,9 @@ Render a sidebar with some components.
 <aside class="sidebar">
   <div class="nav-wrapper">
   {{ partialCached "components/avatar.html" . }}
-  {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-  {{ partial "components/rssFeed.html" . }}
-  {{ partial "components/themeControl.html" . }}
+  <nav class="menu-wrapper">
+    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+  </nav>
   </div>
   {{ partial "components/taxonomies.html" . }}
   {{ partial "components/toc.html" . }}

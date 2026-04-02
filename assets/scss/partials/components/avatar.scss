@@ -1,11 +1,6 @@
 /* partials/components/avatar.scss */
 @use "../../mixins.scss";
 
-.avatar-wrapper {
-  @include mixins.flex-horizontal;
-  justify-content: center;
-}
-
 .avatar {
   height: auto;
   width: 100%;

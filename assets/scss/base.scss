@@ -5,7 +5,7 @@
   @include mixins.flex-horizontal;
 
   &>.content {
+    @include mixins.responsive-width;
     margin-left: max(calc((100% - var(--width-main)) / 2), 0px);
-    width: var(--width-main);
   }
 }

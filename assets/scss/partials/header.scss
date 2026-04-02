@@ -2,25 +2,72 @@
 @use "../mixins.scss";
 
 .base-header {
-  .nav {
+  @include mixins.responsive-width-auto-margin;
+
+  .row-main {
     @include mixins.flex-horizontal;
-    @include mixins.wrapper-main;
     align-items: baseline;
-    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0.5em 0.5em 0 0.5em;
 
     .title-wrapper {
-      display: block;
-
       .title {
-        font-size: 38px;
         margin: 0;
+        padding: 0;
       }
 
-      .link {
+      .title-link {
         color: var(--color-text-link);
         text-decoration: none;
+      }
+    }
+
+    .misc-wrapper {
+      @include mixins.flex-horizontal;
+      align-items: baseline;
+      justify-content: end;
+      gap: 4px;
+
+      .theme-control-wrapper {
+        text-align: center;
+      }
+
+      .rss-feed-wrapper {
+        @include mixins.flex-horizontal;
+        justify-content: center;
+      }
+
+      .avatar-wrapper {
+        @include mixins.flex-horizontal;
+        justify-content: center;
+        height: 24px;
+
+        @media (width >= mixins.$bp-full) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .row-sub {
+    @include mixins.flex-horizontal;
+    justify-content: space-between;
+    padding: 0 0.75em 0.25em 0.75em;
+
+    @media (width >= mixins.$bp-full) {
+      justify-content: start;
+    }
+
+    .multilingual-wrapper {
+      @include mixins.flex-horizontal;
+    }
+
+    .menu-wrapper {
+      @include mixins.flex-horizontal;
+      gap: 1em;
+
+      @media (width >= mixins.$bp-full) {
+        display: none;
       }
     }
   }

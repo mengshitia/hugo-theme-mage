@@ -9,6 +9,10 @@
   min-width: 240px;
   width: 240px;
 
+  @media (width < mixins.$bp-full) {
+    display: none;
+  }
+
   .nav-wrapper {
     @include mixins.card;
     @include mixins.flex-vertical;

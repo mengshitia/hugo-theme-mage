@@ -1,7 +1,1 @@
 /* partials/components/rssFeed.scss */
-@use "../../mixins.scss";
-
-.rss-feed-wrapper {
-  @include mixins.flex-horizontal;
-  justify-content: center;
-}

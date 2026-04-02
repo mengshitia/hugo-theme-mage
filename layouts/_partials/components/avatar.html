@@ -22,7 +22,6 @@ with these keys:
   {{ $isRemote := $config.isRemote }}
   {{ $url := $config.url }}
 
-  <div class="avatar-wrapper">
   {{ if $isRemote }}
     {{ with try (resources.GetRemote $url) }}
       {{ with .Err }}
@@ -43,5 +42,4 @@ with these keys:
       {{ errorf "%q not found" $url }}
     {{ end }}
   {{ end }}
-  </div>
 {{ end }}

@@ -1,4 +1,8 @@
 /* mixins.scss */
+// Responsive breakpoints:
+$bp-slim: 960px;
+$bp-full: 1480px;
+
 @mixin flex-horizontal {
   display: flex;
   flex-direction: row;
@@ -14,7 +18,17 @@
   box-shadow: 0 0 3px 0 var(--color-shadow-article);
 }
 
-@mixin wrapper-main {
-  margin: auto;
-  width: var(--width-main);
+// Responsive width:
+@mixin responsive-width {
+  @media (width < $bp-slim) {
+    width: 100%;
+  }
+  @media (width >= $bp-slim) {
+    width: 960px;
+  }
+}
+
+@mixin responsive-width-auto-margin {
+  @include responsive-width();
+  margin: 0 auto;
 }
