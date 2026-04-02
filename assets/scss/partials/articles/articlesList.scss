@@ -3,6 +3,5 @@
 
 .articles-list {
   @include mixins.flex-vertical;
-  @include mixins.wrapper-main;
   gap: 1rem;
 }

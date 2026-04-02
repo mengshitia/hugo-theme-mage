@@ -54,6 +54,7 @@ $blockquote-left-border-width: 0.25rem;
    */
     code:not(.highlight code) {
       color: var(--color-text-code);
+      word-break: break-all; /* avoid overflow */
     }
 
     mark {

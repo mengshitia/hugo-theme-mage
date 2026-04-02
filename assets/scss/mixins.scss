@@ -16,5 +16,5 @@
 
 @mixin wrapper-main {
   margin: auto;
-  max-width: var(--width-main);
+  width: var(--width-main);
 }

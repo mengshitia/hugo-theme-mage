@@ -5,7 +5,9 @@
   @include mixins.flex-vertical;
   justify-content: start;
   gap: 1rem;
-  width: 20%;
+  margin-left: 20px;
+  min-width: 240px;
+  width: 240px;
 
   .nav-wrapper {
     @include mixins.card;

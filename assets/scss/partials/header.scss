@@ -6,6 +6,7 @@
     @include mixins.flex-horizontal;
     @include mixins.wrapper-main;
     align-items: baseline;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem;
 
@@ -20,18 +21,6 @@
       .link {
         color: var(--color-text-link);
         text-decoration: none;
-      }
-
-      .note {
-        margin: 0;
-      }
-    }
-
-    .menus-list {
-      align-content: end;
-
-      .separator {
-        color: var(--color-separator);
       }
     }
   }
