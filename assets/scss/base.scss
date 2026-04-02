@@ -6,6 +6,6 @@
 
   &>.content {
     @include mixins.responsive-width;
-    margin-left: max(calc((100% - var(--width-main)) / 2), 0px);
+    margin-left: max(calc((100% - 960px) / 2), 0px);
   }
 }
