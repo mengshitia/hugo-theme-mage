@@ -8,8 +8,8 @@ Render the given page as an article.
 */}}
 
 {{ $showComments := .showComments }}
-{{ $date := time.Format "2006-01-02 15:04" .Date }}
 {{ with .page }}
+{{ $date := time.Format "2006-01-02 15:04" .Date }}
 <article class="article">
   <header class="header">
     <h1 class="title">
