@@ -2,6 +2,7 @@ const THEME_AUTO = 'auto'
 const THEME_DARK = 'dark'
 const THEME_LIGHT = 'light'
 const STORED_THEME = 'savedTheme'
+let themeChangeEv = new Event('themeChanged', { bubbles: true })
 
 window.addEventListener('load', () => {
   const darkThemePreference = window.matchMedia('(prefers-color-scheme: dark)')
@@ -96,5 +97,6 @@ window.addEventListener('load', () => {
       /* set to dark */
       setDarkTheme()
     }
+    _self.dispatchEvent(themeChangeEv)
   })
 })

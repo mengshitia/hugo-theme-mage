@@ -92,3 +92,13 @@ $blockquote-left-border-width: 0.25rem;
     padding-top: 0;
   }
 }
+
+.comments-wrapper {
+  margin-top: 2em;
+
+  .provider {
+    @include mixins.flex-horizontal;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+}

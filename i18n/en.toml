@@ -11,6 +11,9 @@
   link = 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en'
   title = 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International'
 
+[comments]
+  poweredBy = 'Comments are powered by {{ .provider }}'
+
 [taxonomy]
   categories = 'Categories'
   tags = 'Tags'

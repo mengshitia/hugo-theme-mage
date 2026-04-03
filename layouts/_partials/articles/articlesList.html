@@ -13,6 +13,6 @@ Display a list of some given articles.
 {{ $page := .page }}
 <div class="articles-list">
   {{ range $articles }}
-    {{ partial "articles/article.html" . }}
+    {{ partial "articles/article.html" (dict "page" . "showComments" false) }}
   {{ end }}
 </div>

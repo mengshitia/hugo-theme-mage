@@ -2,11 +2,14 @@
 Render the given page as an article.
 
 @context (page) . The given page.
+@context (page) showComments Load comments if true.
 
-@example {{ partial "articles/article.html" . }}
+@example {{ partial "articles/article.html" (dict "page" . "showComments" true) }}
 */}}
 
+{{ $showComments := .showComments }}
 {{ $date := time.Format "2006-01-02 15:04" .Date }}
+{{ with .page }}
 <article class="article">
   <header class="header">
     <h1 class="title">
@@ -23,3 +26,15 @@ Render the given page as an article.
     {{ partial "articles/articleTaxonomies.html" . }}
   </footer>
 </article>
+
+  {{ if and site.Params.comments.enabled $showComments (page.Param "comments") }}
+    {{ with site.Params.comments }}
+    <div class="comments-wrapper">
+      <div class="provider">
+        {{ T "comments.poweredBy" (dict "provider" (title .provider) ) }}
+      </div>
+      {{ partial (printf "components/%s.html" .provider) . }}
+    </div>
+    {{ end }}
+  {{ end }}
+{{ end }}
