@@ -8,6 +8,8 @@ categories = ['吐槽']
 tags = ['这不太一样', '测试', '展示']
 [build]
   list = 'always'  # Use 'never' to exclude this page from all page collections.
+[params]
+  comments = false  # Set 'true' to enable.
 +++
 
 ## 标题

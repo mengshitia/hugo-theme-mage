@@ -8,6 +8,8 @@ categories = ['示例文章', '开篇']
 tags = ['测试', '文章', '第一篇']
 [build]
   list = 'always'  # Use 'never' to exclude this page from all page collections.
+[params]
+  comments = false  # Set 'true' to enable.
 +++
 
 ## 标题

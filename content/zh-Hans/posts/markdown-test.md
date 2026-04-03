@@ -8,6 +8,8 @@ categories = ['示例文章']
 tags = ['markdown', '测试', '展示']
 [build]
   list = 'always'  # Use 'never' to exclude this page from all page collections.
+[params]
+  comments = true  # Set 'true' to enable.
 +++
 
 ## 标题

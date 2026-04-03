@@ -8,6 +8,8 @@ categories = ['example']
 tags = ['test', 'post']
 [build]
   list = 'always'  # Use 'never' to exclude this page from all page collections.
+[params]
+  comments = false  # Set 'true' to enable.
 +++
 
 ## Title
